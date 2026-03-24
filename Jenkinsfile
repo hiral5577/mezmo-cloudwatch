@@ -5,6 +5,7 @@ def REPO = "mezmo/${PROJECT_NAME}"
 def TRIGGER_PATTERN = ".*@logdnabot.*"
 def CURRENT_BRANCH = [env.CHANGE_BRANCH, env.BRANCH_NAME]?.find{branch -> branch != null}
 def DEFAULT_BRANCH = 'main'
+def NODE_RELEASE_IMAGE_VERSION = '24'
 
 pipeline {
   agent {
@@ -45,7 +46,7 @@ pipeline {
         axes {
           axis {
             name 'NODE_VERSION'
-            values '20', '22'
+            values '22', '24'
           }
         }
 
@@ -91,7 +92,7 @@ pipeline {
 
       agent {
         docker {
-          image "us.gcr.io/logdna-k8s/node:18-ci"
+          image "us.gcr.io/logdna-k8s/node:${NODE_RELEASE_IMAGE_VERSION}-ci"
           customWorkspace("/tmp/workspace/${env.BUILD_TAG}")
           label 'ec2-fleet'
         }
@@ -119,7 +120,7 @@ pipeline {
 
       agent {
         docker {
-          image "us.gcr.io/logdna-k8s/node:18-ci"
+          image "us.gcr.io/logdna-k8s/node:${NODE_RELEASE_IMAGE_VERSION}-ci"
           customWorkspace("/tmp/workspace/${env.BUILD_TAG}")
           label 'ec2-fleet'
         }
