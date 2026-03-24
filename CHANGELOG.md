@@ -1,5 +1,12 @@
 ## Changelog
 
+## [2.0.2](https://github.com/mezmo/mezmo-cloudwatch/compare/v2.0.1...v2.0.2) (2026-03-24)
+
+
+### Chores
+
+* **test**: upgrade expected node version (#16) [4337ea6](https://github.com/mezmo/mezmo-cloudwatch/commit/4337ea678850f485dd571b442ebb868afdc29e3a) - GitHub, closes: [#16](https://github.com/mezmo/mezmo-cloudwatch/issues/16) [#14](https://github.com/mezmo/mezmo-cloudwatch/issues/14)
+
 ## [2.0.1](https://github.com/mezmo/mezmo-cloudwatch/compare/v2.0.0...v2.0.1) (2026-02-17)
 
 
