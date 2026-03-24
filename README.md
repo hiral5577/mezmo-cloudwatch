@@ -10,7 +10,7 @@ Users can choose to ingest directly into Log Analysis or to a Pipeline.
  * Code entry type: `Upload a .ZIP file`
  * Upload our Lambda function [.ZIP File](https://github.com/mezmo/mezmo-cloudwatch/releases/latest/download/mezmo-cloudwatch.zip).
  * Handler: `index.handler`
- * Runtime: `Node.js 20.x`
+ * Minimum Runtime: `Node.js 22.x`
 
 ### Configuration
 #### General Configuration
